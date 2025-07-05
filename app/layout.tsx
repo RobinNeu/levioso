@@ -1,20 +1,17 @@
-// app/layout.tsx
+import Sidebar from '@/components/Sidebar'
+import ParticlesBackground from '@/components/ParticlesBackground'
 import './globals.css'
-import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Levioso',
-  description: 'Lift your LinkedIn Ads like magic',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body className="flex">
+        <Sidebar />
+        <main className="flex-1 relative overflow-hidden">
+          <ParticlesBackground />
+          <div className="relative z-10 p-8">{children}</div>
+        </main>
+      </body>
     </html>
   )
 }
