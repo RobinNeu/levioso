@@ -29,23 +29,6 @@ export default function DashboardPage() {
       <ParticlesBackground />
 
       <div className="relative z-10">
-        <h1 className="text-4xl font-bold text-center text-glow mb-10">
-          🔮 Wähle deinen magischen Agenten
-        </h1>
-
-        <AgentSelector onSelect={handleSelectAgent} />
-
-        {selectedAgent && (
-          <div className="mt-12 text-center">
-            <h2 className="text-2xl mb-4">Dein gewählter Agent:</h2>
-            <div className="text-3xl font-semibold text-yellow-400 text-glow">
-              {selectedAgent.name}
-            </div>
-            <button className="mt-6 px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-black font-bold rounded-lg shadow-xl transition-all">
-              🚀 Starte mit diesem Agenten
-            </button>
-          </div>
-        )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
           <MetricCard

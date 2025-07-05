@@ -38,7 +38,7 @@ export default function LoginPage() {
           />
           <button
             onClick={handleLogin}
-            className="bg-blue-600 text-white p-2 w-full rounded"
+            className="text-white p-2 w-full rounded"
           >
             ✉️ Magic Link senden
           </button>
